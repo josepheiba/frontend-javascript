@@ -1,21 +1,23 @@
-// DirectorInterface with 3 expected methods
+// Task 5: Advanced types Part 1
 interface DirectorInterface {
   workFromHome(): string;
   getCoffeeBreak(): string;
   workDirectorTasks(): string;
 }
 
-// TeacherInterface with 3 expected methods
 interface TeacherInterface {
   workFromHome(): string;
   getCoffeeBreak(): string;
   workTeacherTasks(): string;
 }
 
-// Director class implementing DirectorInterface
 class Director implements DirectorInterface {
   workFromHome(): string {
     return "Working from home";
+  }
+
+  getToWork(): string {
+    return "Getting a coffee break";
   }
 
   getCoffeeBreak(): string {
@@ -27,7 +29,6 @@ class Director implements DirectorInterface {
   }
 }
 
-// Teacher class implementing TeacherInterface
 class Teacher implements TeacherInterface {
   workFromHome(): string {
     return "Cannot work from home";
@@ -42,7 +43,6 @@ class Teacher implements TeacherInterface {
   }
 }
 
-// Function to create employee based on salary
 function createEmployee(salary: number | string): Director | Teacher {
   if (typeof salary === "number" && salary < 500) {
     return new Teacher();
@@ -50,39 +50,37 @@ function createEmployee(salary: number | string): Director | Teacher {
   return new Director();
 }
 
-// Type predicate function to check if employee is a director
-function isDirector(employee: Director | Teacher): employee is Director {
-  return employee instanceof Director;
-}
-
-// Function to execute work based on employee type
-function executeWork(employee: Director | Teacher): string {
-  if (isDirector(employee)) {
-    return employee.workDirectorTasks();
-  } else {
-    return employee.workTeacherTasks();
-  }
-}
-
-// String literal type for subjects
-type Subjects = "Math" | "History";
-
-// Function to teach class based on subject
-function teachClass(todayClass: Subjects): string {
-  if (todayClass === "Math") {
-    return "Teaching Math";
-  } else {
-    return "Teaching History";
-  }
-}
-
-// Test examples
 console.log(createEmployee(200));
 console.log(createEmployee(1000));
 console.log(createEmployee('$500'));
 
+// Task 6: Creating functions specific to employees
+function isDirector(employee: Director | Teacher): employee is Director {
+  return employee instanceof Director;
+}
+
+function executeWork(employee: Director | Teacher): string {
+  if (isDirector(employee)) {
+    return employee.workDirectorTasks();
+  }
+  return employee.workTeacherTasks();
+}
+
 console.log(executeWork(createEmployee(200)));
 console.log(executeWork(createEmployee(1000)));
+
+// Task 7: String literal types
+type Subjects = 'Math' | 'History';
+
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  }
+  if (todayClass === 'History') {
+    return 'Teaching History';
+  }
+  return '';
+}
 
 console.log(teachClass('Math'));
 console.log(teachClass('History'));

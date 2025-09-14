@@ -9,47 +9,35 @@ const student1: Student = {
   firstName: "John",
   lastName: "Doe",
   age: 20,
-  location: "New York"
+  location: "San Francisco"
 };
 
 const student2: Student = {
   firstName: "Jane",
   lastName: "Smith",
   age: 22,
-  location: "Los Angeles"
+  location: "New York"
 };
 
 const studentsList: Array<Student> = [student1, student2];
 
 // Create table element
-const table: HTMLTableElement = document.createElement('table');
-const tableBody: HTMLTableSectionElement = document.createElement('tbody');
+const table = document.createElement('table');
+const tbody = document.createElement('tbody');
 
-// Add header row
-const headerRow: HTMLTableRowElement = document.createElement('tr');
-const firstNameHeader: HTMLTableHeaderCellElement = document.createElement('th');
-const locationHeader: HTMLTableHeaderCellElement = document.createElement('th');
-
-firstNameHeader.textContent = 'First Name';
-locationHeader.textContent = 'Location';
-
-headerRow.appendChild(firstNameHeader);
-headerRow.appendChild(locationHeader);
-tableBody.appendChild(headerRow);
-
-// Add student rows
-studentsList.forEach((student: Student) => {
-  const row: HTMLTableRowElement = document.createElement('tr');
-  const firstNameCell: HTMLTableDataCellElement = document.createElement('td');
-  const locationCell: HTMLTableDataCellElement = document.createElement('td');
-
+// Create table rows for each student
+studentsList.forEach((student: Student): void => {
+  const row = document.createElement('tr');
+  const firstNameCell = document.createElement('td');
+  const locationCell = document.createElement('td');
+  
   firstNameCell.textContent = student.firstName;
   locationCell.textContent = student.location;
-
+  
   row.appendChild(firstNameCell);
   row.appendChild(locationCell);
-  tableBody.appendChild(row);
+  tbody.appendChild(row);
 });
 
-table.appendChild(tableBody);
+table.appendChild(tbody);
 document.body.appendChild(table);

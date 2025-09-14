@@ -2,17 +2,10 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "sourceMap": true,
-    "strict": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "node",
+    "noImplicitAny": true,
     "module": "es6",
     "target": "es5",
     "allowJs": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
-  },
-  "include": [
-    "**/*"
-  ]
+    "moduleResolution": "node"
+  }
 }

@@ -1,99 +1,41 @@
-# 0x04. Typescript
+# 0x04. TypeScript
 
-This project contains TypeScript exercises covering basic types, interfaces, classes, functions, DOM manipulation, generic types, namespaces, declaration merging, and ambient namespaces.
+Ce projet couvre les concepts fondamentaux de TypeScript incluant les types de base, les interfaces, les classes, les fonctions, le DOM, les types génériques, les namespaces, la fusion de déclarations, les namespaces ambiants, et le typage nominal.
 
-## Learning Objectives
+## Objectifs d'apprentissage
 
-- Basic types in TypeScript
-- Interfaces, Classes, and functions
-- How to work with the DOM and TypeScript
-- Generic types
-- How to use namespaces
-- How to merge declarations
-- How to use an ambient Namespace to import an external library
-- Basic nominal typing with TypeScript
+À la fin de ce projet, vous devriez être capable d'expliquer :
 
-## Requirements
+- Types de base en TypeScript
+- Interfaces, Classes, et fonctions
+- Comment travailler avec le DOM et TypeScript
+- Types génériques
+- Comment utiliser les namespaces
+- Comment fusionner les déclarations
+- Comment utiliser un Namespace ambiant pour importer une bibliothèque externe
+- Typage nominal de base avec TypeScript
 
-- Allowed editors: vi, vim, emacs, Visual Studio Code
-- All files should end with a new line
-- All files will be transpiled on Ubuntu 18.04
-- TS scripts will be checked with jest (version 24.9.*)
-- Code should use the .ts extension when possible
-- The TypeScript compiler should not show any warning or error when compiling the code
+## Exigences
 
-## Tasks
+- Éditeurs autorisés : vi, vim, emacs, Visual Studio Code
+- Tous vos fichiers doivent se terminer par une nouvelle ligne
+- Tous vos fichiers seront transpilés sur Ubuntu 18.04
+- Vos scripts TS seront vérifiés avec jest (version 24.9.*)
+- Un fichier README.md, à la racine du dossier du projet, est obligatoire
+- Votre code doit utiliser l'extension .ts quand c'est possible
+- Le compilateur TypeScript ne doit afficher aucun avertissement ou erreur lors de la compilation de votre code
 
-### 0. Creating an interface for a student
-**File:** `task_0/js/main.ts`
+## Tâches
 
-Create a Student interface and render a table with student data using vanilla JavaScript.
-
-### 1. Let's build a Teacher interface
-**File:** `task_1/js/main.ts`
-
-Create Teacher and Directors interfaces with readonly properties and optional attributes.
-
-### 2. Extending the Teacher class
-**File:** `task_1/js/main.ts`
-
-Extend Teacher interface to create Directors interface and implement printTeacher function.
-
-### 3. Printing teachers
-**File:** `task_1/js/main.ts`
-
-Create printTeacher function and StudentClass with proper interfaces.
-
-### 4. Writing a class
-**File:** `task_1/js/main.ts`
-
-Implement StudentClass with constructor and methods described through interfaces.
-
-### 5. Advanced types Part 1
-**File:** `task_2/js/main.ts`
-
-Create DirectorInterface and TeacherInterface with classes and employee creation function.
-
-### 6. Creating functions specific to employees
-**File:** `task_2/js/main.ts`
-
-Implement type predicates and work execution functions.
-
-### 7. String literal types
-**File:** `task_2/js/main.ts`
-
-Create string literal types for subjects and teachClass function.
-
-### 8. Ambient Namespaces
-**Files:** `task_3/js/main.ts`, `task_3/js/interface.ts`, `task_3/js/crud.d.ts`
-
-Work with ambient namespaces and external libraries using TypeScript declarations.
-
-### 9. Namespace & Declaration merging
-**Files:** `task_4/js/subjects/*.ts`, `task_4/js/main.ts`
-
-Implement namespace declaration merging across multiple files.
-
-### 10. Update task_4/js/main.ts
-**File:** `task_4/js/main.ts`
-
-Create subject constants and demonstrate usage with cTeacher object.
-
-### 11. Brand convention & Nominal typing
-**File:** `task_5/js/main.ts`
-
-Implement brand properties for nominal typing with credit interfaces.
-
-## Usage
-
-To build and run any task:
-
-```bash
-cd task_X
-npm install
-npm run build
-```
-
-## Author
-
-ALX Software Engineering Program - TypeScript Module
+### 0. Création d'une interface pour un étudiant
+### 1. Construisons une interface Teacher
+### 2. Extension de la classe Teacher
+### 3. Impression des enseignants
+### 4. Écriture d'une classe
+### 5. Types avancés Partie 1
+### 6. Création de fonctions spécifiques aux employés
+### 7. Types littéraux de chaîne
+### 8. Namespaces ambiants
+### 9. Namespace & Fusion de déclarations
+### 10. Mise à jour de task_4/js/main.ts
+### 11. Convention de marque & Typage nominal
