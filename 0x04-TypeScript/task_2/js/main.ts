@@ -55,7 +55,7 @@ console.log(createEmployee(1000));
 console.log(createEmployee('$500'));
 
 // Task 6: Creating functions specific to employees
-function isDirector(employee: Director | Teacher): employee is Director {
+export function isDirector(employee: Director | Teacher): employee is Director {
   return employee instanceof Director;
 }
 
